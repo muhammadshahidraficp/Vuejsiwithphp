@@ -1,0 +1,96 @@
+*{
+	margin:0;
+	padding:0;
+}
+.container{
+	width: 960px;
+	margin:auto;
+	margin-top:44px;
+}
+.fleft{
+	float: left;
+}
+.fright{
+	float:right;
+}
+.clear{
+	clear:both;
+}
+h1{
+	font-size:22px; 
+}
+
+.addNew{
+	padding:2px 9px;
+}
+table.list th{
+	margin-top:33px;
+	background:#0E5196;
+	color:#FFFFFF;
+	padding:9px;
+}
+table.list{
+	width:100%;
+}
+table.list{
+	padding:9px;
+}
+table.list tr{
+	background:#EEEEEE;
+}
+button{
+	padding: 2px 6pc;
+}
+
+hr{
+	margin-top: 4px;
+}
+.model{
+	background:rgb(0,0,0,0.4);
+	position:fixed;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+}
+.modelContainer{
+	width:555px;
+	background:#FFFFFF;
+	margin:auto;
+	margin-top: 45px;
+}
+.modelHeading{
+	padding: 6px;
+	background: #06307C;
+	color:#FFFFFF;
+}
+.modelContent{
+	min-height: 333px;
+	padding:44px;
+}
+.close{
+	background: #D73131;
+	padding:3px 9px;
+	border:none;
+	margin-top: -27px;
+	margin-right:6px;
+	color: white;
+}
+table.form input,table.form{
+	padding:3px;
+}
+p.successMessage{
+	background: #D8EFC2;
+	color: #097133;
+	border-left: 5px solid  #097133;
+	padding: 9px;
+	margin: 22px 0;
+}
+
+p.errorMessage{
+	background: #EFCBC2;
+	color: #D71517;
+	border-left: 5px solid  #DA1527;
+	padding: 9px;
+	margin: 22px 0;
+}
