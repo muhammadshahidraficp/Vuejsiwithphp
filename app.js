@@ -25,7 +25,7 @@ var app= new Vue({
 	},
 	methods:{
 		Display: function(){
-			axios.get("http://localhost/Detail/connect.php?action=read").then(function(response){
+			axios.get("http://localhost/Vuejsiwithphp/connect.php?action=read").then(function(response){
 				//console.log("dtdtedrtertertetert");
 				console.log(response);
 				if(response.data.error){
@@ -39,7 +39,7 @@ var app= new Vue({
 		saveUser: function(){
 			console.log(app.newuser)
 			var formData=app.toFormData(app.newuser)
-			axios.post("http://localhost/Detail/connect.php?action=create",formData).then(function(response){
+			axios.post("http://localhost/Vuejsiwithphp/connect.php?action=create",formData).then(function(response){
 				//console.log("dtdtedrtertertetert");
 				console.log(response);
 				app.newuser={username:"",email:"",mobile:""}
@@ -58,7 +58,7 @@ var app= new Vue({
 		updateUser: function(){
 			console.log(app.newuser)
 			var formData=app.toFormData(app.clickedUser)
-			axios.get("http://localhost/Detail/connect.php?action=update",formData).then(function(response){
+			axios.get("http://localhost/Vuejsiwithphp/connect.php?action=update",formData).then(function(response){
 				//console.log("dtdtedrtertertetert");
 				console.log(response);
 				app.clickedUser={}
@@ -74,7 +74,7 @@ var app= new Vue({
 		},
 		deleteUser: function(){
 			var formData=app.toFormData(app.clickedUser)
-			axios.get("http://localhost/Detail/connect.php?action=delete",formData).then(function(response){
+			axios.get("http://localhost/Vuejsiwithphp/connect.php?action=delete",formData).then(function(response){
 				//console.log("dtdtedrtertertetert");
 				console.log(response);
 				app.clickedUser={};
