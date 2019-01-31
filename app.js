@@ -12,15 +12,11 @@ var app= new Vue({
 			email:"",
 			mobile:""
 		},
-		clickedUser:{
-			username:"",
-			email:"",
-			mobile:""
-		}
+		clickedUser:{}
 
 	},
 	mounted:function(){
-		console.log("Hello world");
+		//console.log("Hello world");
 		this.Display();
 	},
 	methods:{
@@ -58,7 +54,7 @@ var app= new Vue({
 		updateUser: function(){
 			console.log(app.newuser)
 			var formData=app.toFormData(app.clickedUser)
-			axios.get("http://localhost/Vuejsiwithphp/connect.php?action=update",formData).then(function(response){
+			axios.post("http://localhost/Vuejsiwithphp/connect.php?action=update",formData).then(function(response){
 				//console.log("dtdtedrtertertetert");
 				console.log(response);
 				app.clickedUser={}
@@ -74,7 +70,7 @@ var app= new Vue({
 		},
 		deleteUser: function(){
 			var formData=app.toFormData(app.clickedUser)
-			axios.get("http://localhost/Vuejsiwithphp/connect.php?action=delete",formData).then(function(response){
+			axios.post("http://localhost/Vuejsiwithphp/connect.php?action=delete",formData).then(function(response){
 				//console.log("dtdtedrtertertetert");
 				console.log(response);
 				app.clickedUser={};

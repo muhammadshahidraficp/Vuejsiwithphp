@@ -14,7 +14,7 @@
 		<hr>
 		<p class="errorMessage" v-if="errorMessage">{{errorMessage}}</p>
 		<p class="successMessage" v-if="successMessage">{{successMessage}}</p>
-		<table class="list" border="2" cellspacing="5" cellpadding="10">
+		<table class="list" cellspacing="2" cellpadding="2">
 			<tr>
 				<th>ID</th>
 				<th>Username</th>
@@ -85,7 +85,7 @@
 								<td><input type="text" v-model="clickedUser.mobile"></td>
 							</tr>
 							<tr>
-							<td><button @click="editview=false; UpdateUser()">Update</button></td>
+							<td><button @click="editview=false; updateUser()">Edit</button></td>
 							</tr>
 						</table>
 				</div>
@@ -98,9 +98,13 @@
 			<div class="modelHeading">&nbsp;&nbsp;Confirm Box &nbsp; &nbsp;<p class="fleft">Are you sure?</p></div>
 				<button class="fright close" @click="deleteview=false">x</button>
 				<div class="modelContent">
-						<span>you are going to delete {{clickedUser.username}}</span>
+						<span>you are going to delete {{clickedUser.username}} Details</span>
+						<div>
 						<button @click="deleteview=false; deleteUser()">YES</button>
 						<button @click="deleteview=false">No</button>
+						<br><br>Email: {{clickedUser.email}}<br><br>
+						Mobile: {{clickedUser.mobile}}
+						</div>
 				</div>
 		</div>
 	</div>
